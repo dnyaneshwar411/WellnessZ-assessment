@@ -19,7 +19,7 @@ export default function Page() {
         password: e.currentTarget.password.value,
       }
       const response = await postData("user/register", data);
-      console.log(response) 
+      console.log(response)
       if (response.success) onChangeUser(response.payload)
     } catch (error) {
       console.log(error)
@@ -28,7 +28,7 @@ export default function Page() {
 
   useEffect(function () {
     if (isLoggedIn) router.push("/");
-  }, [isLoggedIn]);
+  }, [isLoggedIn, router]);
 
 
   return <div className="flex items-center justify-center h-screen">

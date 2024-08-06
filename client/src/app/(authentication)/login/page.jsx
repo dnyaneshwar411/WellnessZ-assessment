@@ -26,7 +26,7 @@ export default function Page() {
 
   useEffect(function () {
     if (isLoggedIn) router.push("/")
-  }, [isLoggedIn])
+  }, [isLoggedIn, router])
 
   return <div className="flex items-center justify-center h-screen">
     <form onSubmit={handleSubmit}>
